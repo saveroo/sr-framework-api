@@ -8,6 +8,7 @@
 /* eslint-env node */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { configure } = require('quasar/wrappers');
+const envParser = require('./envParser');
 
 module.exports = configure(function (ctx) {
   return {
@@ -64,6 +65,7 @@ module.exports = configure(function (ctx) {
       // showProgress: false,
       // gzip: true,
       // analyze: true,
+      env: envParser(),
 
       // Options below are automatically set depending on the env, set them if you want to override
       // extractCSS: false,
