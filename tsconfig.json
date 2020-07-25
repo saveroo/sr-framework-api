@@ -4,6 +4,7 @@
     "outDir": "./dist/public/",
     "baseUrl": ".",
     "noEmit": false,
-    "target": "ES6"
+    "target": "ES6",
+    "esModuleInterop": true
   }
 }

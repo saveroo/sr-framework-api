@@ -1,12 +1,11 @@
 {
   "name": "srframework-api",
-  "version": "0.0.1",
+  "version": "0.0.1-rc.0",
   "description": "SR Framework API Updater",
   "productName": "SRFramework API",
   "author": "Muhammad Surga Savero <saveroo27@gmail.com>",
   "private": true,
   "scripts": {
-
     "lint": "eslint --ext .js,.ts,.vue ./src",
     "lintp": "eslint --ext .js,.ts,.vue ./public",
     "test": "echo \"No test specified\" && exit 0"
@@ -30,6 +29,7 @@
     "@quasar/app": "^2.0.0",
     "@types/crypto-js": "^3.1.47",
     "@types/jsonfile": "^6.0.0",
+    "@types/lodash": "^4.14.158",
     "@types/node": "^10.17.15",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
