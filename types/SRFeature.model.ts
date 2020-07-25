@@ -1,4 +1,4 @@
-﻿export namespace SRFeature {
+﻿declare namespace SRFeature {
 
   export interface SRFChangelog {
     Date: string;

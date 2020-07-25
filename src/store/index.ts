@@ -1,4 +1,3 @@
-import types from './../../types/SRFeature.d';
 import { store } from 'quasar/wrappers';
 import Vuex from 'vuex';
 import moduleDb from './module-db';
@@ -15,7 +14,7 @@ export interface StateInterface {
   // Define your own store structure, using submodules if needed
   // example: ExampleStateInterface;
   // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
-  srfeature: types.SRFeature.RootObject
+  srfeature: SRFeature.RootObject
   // example: unknown;
 }
 

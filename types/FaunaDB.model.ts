@@ -1,4 +1,4 @@
-﻿export namespace FaunaDB {
+﻿declare namespace FaunaDB {
   export interface faunaOptions {
     secret?: string,
     domain: string,

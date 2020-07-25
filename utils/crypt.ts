@@ -101,5 +101,9 @@ export default {
     const hmac = createHmac('sha512', key)
     hmac.update(url, 'utf8')
     return hmac.digest('hex')
+  },
+  base64HmacDecoder: (b64Hmac: string) => {
+      const b = Buffer.from(b64Hmac, 'base64').toString()
+      return CryptoJS.enc.Utf8.parse(b).toString();
   }
 }

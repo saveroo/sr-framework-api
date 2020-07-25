@@ -1,4 +1,4 @@
-﻿export namespace SRFApis {
+﻿declare namespace SRFApis {
 
   export interface IFromFauna {
     count: number,

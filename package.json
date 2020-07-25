@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./src",
     "lintp": "eslint --ext .js,.ts,.vue ./public",
+    "lint-vercel": "eslint --ext .js,.ts,.vue ./api ./utils ./types",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {

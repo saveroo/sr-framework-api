@@ -5,7 +5,9 @@ import guard from '../../utils/guard';
 const {CRYPT_KEY} = process.env; 
 // TODO: Check Version properly
 // /check/version
-module.exports = async (request: NowRequest, response: NowResponse) => {
+export default async (request: NowRequest, response: NowResponse) => {
+  // console.log('query: ' + request.query);
+  // console.log('headers: ' + request.headers);
   guard(request, response).then(async (condition) => {
     const data = await json;
     if(condition){
