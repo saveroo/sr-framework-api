@@ -4,7 +4,7 @@ import { NowRequest, NowResponse } from '@vercel/node/dist';
 import { SRFApis } from '../../types/SRFApis';
 import DB from '../../utils/db';
 import Guard from '../../utils/guard';
-
+const {CRYPT_KEY} = process.env
 // const q = query;
 
 // const {decrypted} = require("../../util/crypt")
@@ -34,7 +34,7 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
             // let data = Buffer.from(req.body.data, 'base64').toString();
 
             // New AES Encrypted
-            let data: any = srCrypt.decrypted('SRFramework', request.body.data);
+            let data: any = srCrypt.decrypted(CRYPT_KEY as string, request.body.data);
             data = JSON.parse(data);
             // data.data.iso
 

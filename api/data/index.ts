@@ -2,7 +2,7 @@
 import crypt from '../../utils/crypt';
 import json from '../../utils/loaders';
 import guard from '../../utils/guard';
-
+const {CRYPT_KEY} = process.env; 
 // TODO: Check Version properly
 // /check/version
 module.exports = async (request: NowRequest, response: NowResponse) => {
@@ -10,7 +10,7 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
     const data = await json;
     if(condition){
       const stringify = JSON.stringify(data)
-      const encryptedBody = crypt.encrypted('SRFramework', stringify);
+      const encryptedBody = crypt.encrypted(CRYPT_KEY as string, stringify);
       return response.status(200).json({
         status: response.statusCode,
         author: crypt.salt(),
