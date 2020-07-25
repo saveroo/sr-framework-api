@@ -1,9 +1,9 @@
 # SRFramework API 
 
 > SR Framework API
-#
+
 ## # Data Structure
-#
+
 1. SRFAuthor 
 2. SRFContact 
 3. SRFRepository 
@@ -62,8 +62,8 @@
         - enabled 
 
 ## # TODOs
-#
-- **Client**
+
+#### - **Client**
 - [x] Splash Based Initialization  
 - [x] Form Loader
 - [x] Form Main 
@@ -72,14 +72,14 @@
 - [x] Cryptography
 - [x] Offline first 
 ##
-- **Server**
+#### - **Server**
 - [x] API Consumption
   - [x] Update Checker
   - [x] Data Retriever
   - [x] Device Registeration
 - [ ] Write UI to travese and manipulate
 ##
-- **Data**
+#### - **Data**
 - [ ] Flatten features
 
 ### Customize the configuration
