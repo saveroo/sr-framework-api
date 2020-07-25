@@ -9,6 +9,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { configure } = require('quasar/wrappers');
 const envParser = require('./envParser');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = configure(function (ctx) {
   return {
@@ -52,7 +54,7 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
-
+      distDir: ctx.mode.spa ? 'public/dist' : null,
       // transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
@@ -78,9 +80,55 @@ module.exports = configure(function (ctx) {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /node_modules/
+          exclude: [/node_modules/, /src-pwa/, /src-ssr/]
         })
         }
+
+        // let vercel = {
+        //   test: /\.ts?$/,
+        //   loader: ['ts-loader', 'babel-loader'],
+        //   include: ['/src/utils/*', '/src/api/**', '/src/types/*'],
+        //   // output: {
+        //   //   filename: 'test.js',
+        //   //   path: path.resolve('./dist/spa/')
+        //   // }
+        // }
+        // cfg.module.rules.push(vercel)
+        // cfg.resolve.alias = {
+        //   ...cfg.resolve.alias,
+        //   // modules: path.resolve(__dirname, './src/api'),
+        //   'api': path.resolve(__dirname, './src/api'),
+        //   'utils': path.resolve(__dirname, './src/utils')
+        // }
+        // cfg.plugins.push(
+        //   new CopyWebpackPlugin({
+        //     patterns: [
+        //       // { from: './src/api/', to: './api'},
+        //       // { from: './src/utils/', to: './utils'},
+        //       // { from: './src/types/', to: './types'},
+        //       // { from: './src/statics/', to: './statics'},
+        //       { from: path.resolve(`${__dirname}`, './package.json'), to: path.resolve(`${__dirname}`, './public/')}
+        //     ]
+        //   })
+        // )
+        // console.info(cfg.plugins);
+
+        // cfg.entries(
+        //   {'api': './src/api/*'}
+        // )
+        // cfg.output.push(
+        //   {
+        //     path: path.resolve(__dirname, './dist/spa/'),
+        //     filename: '[name].tete.js'
+        //   }
+        // )
+        // cfg
+        //   .plugin('copy')
+        //   .tap(args => {
+        //     console.log(args)
+        //     args.push({from: '/src/api', to: '/dist/api'})
+        //     args.push({from: '/src/utils', to: '/dist/utils'})
+        //   })
       },
     },
 
@@ -193,7 +241,10 @@ module.exports = configure(function (ctx) {
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
       nodeIntegration: true,
 
-      extendWebpack (/* cfg */) {
+      extendWebpack () {
+        // ,
+        // cfg.module.rules.push({
+        // })
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }
