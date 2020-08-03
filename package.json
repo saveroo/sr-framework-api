@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@types/aws-lambda": "^8.10.59",
     "@vercel/node": "^1.7.3",
     "@vue/composition-api": "^0.6.4",
     "axios": "^0.18.1",
@@ -24,7 +25,8 @@
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.19",
     "now": "^19.2.0",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "serverless-azure-functions": "^2.0.13"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

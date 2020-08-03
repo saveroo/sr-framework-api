@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "./dist/public/",
     "baseUrl": ".",
-    "noEmit": false
+    "noEmit": false,
+    "target": "ESNext"
   }
 }

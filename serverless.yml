@@ -1,0 +1,39 @@
+﻿service: srframework-service
+
+provider: 
+  name: azure
+  runtime: nodejs
+  location: West US
+
+plugins:
+  - serverless-azure-functions
+
+package:
+  include: 
+    - serverless/serverless.ts
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .vercel
+    - .idea
+    - .vscode
+    - src
+    - src-pwa
+    - src-ssr
+    - package.json
+    - .git/**
+
+functions:
+  hello:
+     handler: handler.hello
+     events:
+       - http: true
+         x-azure-settings:
+          authLevel: anonymous
+          hello:
+  data:
+    handler: handler.data
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel: anonymous
