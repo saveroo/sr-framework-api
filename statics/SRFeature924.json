@@ -10,25 +10,25 @@
             "Title": "[First Public Release]",
             "Description": "As it is",
             "Changes": [
-                "[Main Loader]",
-                "  -(feat): Game Selection",
-                "  -(feat): Version Selection",
-                "  -(feat): Data Updater",
+                "-[Main Loader]",
+                "--(feat): Game Selection",
+                "--(feat): Version Selection",
+                "--(feat): Data Updater",
                 "[Main Helper]",
                 "-[Category] Country",
-                "  -(feat): Common Options",
+                "---(feat): Common Options",
                 "-[Category] Warfare",
-                "  -(feat): Health Bar",
-                "  -(feat): Unit History",
-                "  -(feat): Special Wrapped Option",
-                "  -(feat): Common Unit Editor",
-                "  -(feat): +Tech Req 1 and 2",
-                "  -(feat): +Price",
-                "  -(feat): +Goods Needed",
+                "---(feat): Health Bar",
+                "---(feat): Unit History",
+                "---(feat): Special Wrapped Option",
+                "---(feat): Common Unit Editor",
+                "---(feat): +Tech Req 1 and 2",
+                "---(feat): +Price",
+                "---(feat): +Goods Needed",
                 "-[Resources]",
-                "  -(feat): Essential Options",
+                "---(feat): Essential Options",
                 "-[Special]",
-                "  -(feat): Essential Options"
+                "---(feat): Essential Options"
             ]
         }
     ],
@@ -69,9 +69,8 @@
     "SRFDescription": "Supreme Ruler Ultimate Trainer with lots of option",
     "SRFIdentifier": "SR_RTE",
     "SRFVersion": "1.0.0.0",
-    "SRFRevision": "r0208201",
-    "SRFMandatoryUpdate": false,
-    "SRFDownloadLink": "https://ouo.io/QKoXQe",
+    "SRFRevision": "(180720 r4)",
+    "SRFDownloadLink": "https://google.com",
     "SRFTags": [
         "Games",
         "Trainer",
@@ -85,7 +84,7 @@
             "ProcessName": "SupremeRulerUltimate.exe",
             "Versions": [
                 {
-                    "GameVersion": "9, 2, 5",
+                    "GameVersion": "9, 2, 4",
                     "Availability": true,
                     "Pointers": [
                         {
@@ -95,7 +94,7 @@
                             "category": "",
                             "categoryScope": [],
                             "offsetsList": [],
-                            "pointer": "0x0104D130"
+                            "pointer": "0x0104D12C"
                         },
                         {
                             "id": 2,
@@ -122,7 +121,7 @@
                             "category": "",
                             "categoryScope": [],
                             "offsetsList": [],
-                            "pointer": "0x0104D130"
+                            "pointer": "0x0104D12C"
                         },
                         {
                             "id": 5,
@@ -384,7 +383,7 @@
                                     "description": "",
                                     "value": "",
                                     "formattedValue": "",
-                                    "format": "opinion",
+                                    "format": "",
                                     "offset": "0x7AB0",
                                     "editable": true,
                                     "enabled": true
