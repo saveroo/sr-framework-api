@@ -2,12 +2,6 @@
 
 const q = query;
 
-// const {decrypted} = require("../../util/crypt")
-// const fs = require("fs");
-// const _ = require("lodash");
-// const json = require("../../util/utils");
-
-// const secret: string = "fnADxVYOkQACEngPSzJ3jq0d7VJ2btleWzRFPs6H";
 const secret = process.env.FAUNADB_SECRET || process.env.FAUNADB_SERVER_KEY;
 
 const opts: ClientConfig = {
