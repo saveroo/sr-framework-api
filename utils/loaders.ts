@@ -1,10 +1,9 @@
-﻿﻿import { readFile } from 'jsonfile';
+﻿﻿import jsonFile from 'jsonfile';
 import path from 'path';
 
 export default new Promise((resolve, reject) => {
   const jsonPath = path.resolve(__dirname, '../statics/SRFeature.json')
-  console.log(jsonPath)
-  const load: Promise<SRFeature.RootObject> = readFile(jsonPath);
+  const load: Promise<SRFeature.RootObject> = jsonFile.readFile(jsonPath);
   load.then((data: SRFeature.RootObject) => {
     resolve(data);
   }).catch(e => {

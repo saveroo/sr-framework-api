@@ -86,6 +86,7 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
               }
               break;
             case 'update':
+              response.status(200).send("placeholder");
               break;
             case 'retrieve':
               break;

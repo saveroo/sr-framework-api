@@ -1,25 +1,21 @@
-﻿import { NowRequest, NowResponse } from '@vercel/node/dist';
-import crypt from './crypt';
-const { HMAC_KEY, GUARD_AGENT, GUARD_REFERER, GUARD_KEY } = process.env
+﻿import crypt from './crypt';
+const { HMAC_KEY, GUARD_AGENT, GUARD_REFERER, GUARD_KEY, GUARD_STATE } = process.env
 
-
-
-export default async (request: NowRequest, _: NowResponse) => {
-    // console.log('query: ' + request.query);
-    // console.log('headers: ' + request.headers);
+export default async (request: any, _?: any) => {
     return new Promise((resolve, reject) => {
 
-        
+        if(GUARD_STATE == "0") {
+            resolve(true);
+        } else {
         const { url } = request
         const { pathname, searchParams} = new URL(url as string, 'http://localhost/')
-        
+
         const clientUserAgent = GUARD_AGENT as string,
               clientReferer = GUARD_REFERER as string,
               clientKey = GUARD_KEY as string;
 
-        const clientToken = searchParams.get('token') == null ? reject(false) : searchParams.get('token');
+        const clientToken = searchParams.get('token');
         const key = searchParams.get('key')
-
 
         console.log(url);
         // crypt.base64HmacDecoder(clientToken as string)
@@ -37,7 +33,7 @@ export default async (request: NowRequest, _: NowResponse) => {
         }
         
         if(request.headers['referer'] as string != clientReferer) {       
-            console.log(request.headers['referer'] ,"Referer False");
+            console.log(request.headers['referer'] ,"Referer False", clientReferer);
             reject(false)
         } 
 
@@ -52,10 +48,9 @@ export default async (request: NowRequest, _: NowResponse) => {
                 console.log("Client Key");
                 reject(false)
             }
-
             resolve(true)
         }
-        
         reject(false)
+        }
     })
 }

@@ -5,14 +5,8 @@ import Guard from '../../utils/guard';
 // TODO: Check Version properly
 // /check/version
 module.exports = async (req: NowRequest, res: NowResponse) => {
-  const key = 'sr';
-  const reqAgent = req.headers['user-agent'] === 'SRFramework';
-  const reqKey = (key: string) => {
-    return req.query.key == key;
-  };
-
   Guard(req, res).then(async (condition) => {
-    if (reqKey(key) && reqAgent) {
+    if (condition) {
       return await json.then((data) => {
         const ga = data as SRFeature.RootObject;
         const games = ga.Games;
