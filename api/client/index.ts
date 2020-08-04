@@ -4,23 +4,6 @@ import { NowRequest, NowResponse } from '@vercel/node/dist';
 import DB from '../../utils/db';
 import Guard from '../../utils/guard';
 const {CRYPT_KEY} = process.env
-// const q = query;
-
-// const {decrypted} = require("../../util/crypt")
-// const fs = require("fs");
-// const _ = require("lodash");
-// const json = require("../../util/utils");
-
-// const secret: string = "fnADxVYOkQACEngPSzJ3jq0d7VJ2btleWzRFPs6H";
-// const secret = process.env.FAUNADB_SECRET || process.env.FAUNADB_SERVER_KEY;
-
-// const opts: ClientConfig = {
-//   secret,
-//   domain: 'db.fauna.com',
-//   scheme: 'https',
-// }
-
-// const client = new faunadb.Client(opts);
 
 module.exports = async (request: NowRequest, response: NowResponse) => {
   // console.log('query: ' + request.query);
@@ -69,11 +52,11 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
                   deviceId: clientData.deviceId,
                   data: '',
                 });
-              } else {
+              } else { // else update the registered user device
                 const refId = serverData.ref.id;
                 await dbq.updateByRef(refId, {
                   // ref: refId,
-                  count: serverData.data.count++,
+                  count: serverData.data.count+1,
                   data: {
                     LastActive: dt,
                   },
