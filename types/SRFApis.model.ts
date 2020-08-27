@@ -22,6 +22,26 @@
     Description: string;
   }
 
+  export interface ClientSteamProfile {
+    steamid: string,
+    realname: string,
+    personaname: string,
+    profileurl: string,
+    avatar: string,
+    avatarmedium: string,
+    avatarfull: string,
+    avatarhash: string,
+    profilestate: number,
+    commentpermission: number,
+    personastate: number,
+    personastateflags: number,
+    primaryclanid: string,
+    timecreated: 1371301688,
+    lastlogoff: 1597229763,
+    loccountrycode: string,
+    locstatecode: string
+  }
+
   export interface SRClient {
     ref: string;
     DeviceID: string;
@@ -36,6 +56,7 @@
     SRRevision: string;
     OS: ClientOS[];
     CPU: ClientCPU[];
+    STEAM?: ClientSteamProfile;
   }
 
 }

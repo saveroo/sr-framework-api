@@ -3,7 +3,19 @@ import { default as srCrypt } from '../../utils/crypt';
 import { NowRequest, NowResponse } from '@vercel/node/dist';
 import DB from '../../utils/db';
 import Guard from '../../utils/guard';
+import steam from '../../utils/steampie'; // 
 const {CRYPT_KEY} = process.env
+
+// Faunda DB Class, get index and put as ServerData
+// Register 
+// - Get Index
+// Steam
+// - blabla
+const dbq = DB;
+
+
+// new Date, for updating last Active
+const dt = new Date().toString();
 
 module.exports = async (request: NowRequest, response: NowResponse) => {
   // console.log('query: ' + request.query);
@@ -16,12 +28,12 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
             case 'register':
               // Legacy
               // let data = Buffer.from(req.body.data, 'base64').toString();
-  
-              // New AES Encrypted
+
+              // New AES Encrypted, decrypted the payload send by apps. 
               let data: any = srCrypt.decrypted(CRYPT_KEY as string, request.body.data);
               data = JSON.parse(data);
-              // data.data.iso
   
+              // Construct decrypted payload Client Data From FAUNDADB
               const clientData: SRFApis.IFromFauna = {
                 // ref: "SURGASAVERO",
                 count: 1,
@@ -29,7 +41,8 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
                 deviceId: request.body.deviceId,
                 data,
               };
-              const dbq = DB;
+
+              // helper from FaunaDB
               const helper: any = await dbq.getIndexByTerms(
                 'user_by_deviceId',
                 clientData.deviceId
@@ -38,9 +51,7 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
   
               let deviceId;
               if (helper.data.length > 0) deviceId = serverData.data.deviceId;
-  
-              // new Date
-              const dt = new Date().toString();
+
   
               // If supplied data is not the same as in db, then create new;
               if (clientData.deviceId != deviceId) {
@@ -71,6 +82,27 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
             case 'update':
               response.status(200).send("placeholder");
               break;
+            case 'steam':
+              // Get Steam Player Information 
+              // if(data.SteamPlayerID != null)
+              if(request.body) {
+                let player = await steam.GetPlayerSummaries(request.body.playerSteamID);
+
+                await dbq.updateByRef(request.body.refId, {
+                  data: {
+                    LastActive: dt,
+                    STEAM: player
+                  }
+                })
+                // Decript 
+                // let data: any = srCrypt.decrypted(CRYPT_KEY as string, request.body.data);
+                // data = JSON.parse(data);
+
+                console.log(request.body)
+                // jkljl
+                response.status(200).json(player);
+              }
+              break;
             case 'retrieve':
               break;
             case 'logout':
@@ -81,7 +113,7 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
           }
         }
       } catch (error) {
-        console.log('Catch what ?')
+        console.log('Catch what ?', error)
         response.status(400).json({ error });
       }
     })
