@@ -17,6 +17,7 @@
     "@vercel/node": "^1.7.3",
     "@vue/composition-api": "^0.6.4",
     "axios": "^0.18.1",
+    "cheerio": "^1.0.0-rc.3",
     "core-js": "^3.6.5",
     "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
