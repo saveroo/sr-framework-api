@@ -6,3 +6,6 @@
 /node_modules
 /src-ssr
 /src-pwa
+/inactive
+/api/client/dist
+/serverless
