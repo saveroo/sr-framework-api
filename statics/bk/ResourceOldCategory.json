@@ -1,0 +1,295 @@
+[
+    {
+        "id": 0,
+        "categoryName": "SUBRESOURCES_STOCK",
+        "categoryDisplayName": "Resources - Stock",
+        "categoryVisibility": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "StockAgriculture",
+            "StockRubber",
+            "StockTimber",
+            "StockPetroleum",
+            "StockCoal",
+            "StockMetalOre",
+            "StockUranium",
+            "StockElectricPower",
+            "StockConsumerGoods",
+            "StockIndustryGoods",
+            "StockMilitaryGoods"
+        ]
+    },
+    {
+        "id": 1,
+        "categoryName": "SUBRESOURCES_DEMANDS",
+        "categoryDisplayName": "Resources - Demands",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "DemandAgricultureAnnually",
+            "DemandRubberAnnually",
+            "DemandTimberAnnually",
+            "DemandPetroleumAnnually",
+            "DemandCoalAnnually",
+            "DemandMetalOreAnnually",
+            "DemandUraniumAnnually",
+            "DemandElectricPowerAnnually",
+            "DemandConsumerGoodsAnnually",
+            "DemandIndustryGoodsAnnually",
+            "DemandMilitaryGoodsAnnually"
+        ]
+    },
+    {
+        "id": 2,
+        "categoryName": "SUBRESOURCES_ACTUALUSE",
+        "categoryDisplayName": "Resources - Actual Use",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "ActualUseAgricultureAnnually",
+            "ActualUseRubberAnnually",
+            "ActualUseTimberAnnually",
+            "ActualUsePetroleumAnnually",
+            "ActualUseCoalAnnually",
+            "ActualUseMetalOreAnnually",
+            "ActualUseUraniumAnnually",
+            "ActualUseElectricPowerAnnually",
+            "ActualUseConsumerGoodsAnnually",
+            "ActualUseIndustryGoodsAnnually",
+            "ActualUseMilitaryGoodsAnnually"
+        ]
+    },
+    {
+        "id": 3,
+        "categoryName": "SUBRESOURCES_PRODUCTION",
+        "categoryDisplayName": "Resources - Production",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "ProductionAgricultureAnnually",
+            "ProductionRubberAnnually",
+            "ProductionTimberAnnually",
+            "ProductionPetroleumAnnually",
+            "ProductionCoalAnnually",
+            "ProductionMetalOreAnnually",
+            "ProductionUraniumAnnually",
+            "ProductionElectricPowerAnnually",
+            "ProductionConsumerGoodsAnnually",
+            "ProductionIndustryGoodsAnnually",
+            "ProductionMilitaryGoodsAnnually"
+        ]
+    },
+    {
+        "id": 4,
+        "categoryName": "SUBRESOURCES_PRODUCTIONCAPACITY",
+        "categoryDisplayName": "Resources - Production Capacity",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "ProductionCapacityCapacityionAgriculture",
+            "ProductionCapacityRubber",
+            "ProductionCapacityTimber",
+            "ProductionCapacityPetroleum",
+            "ProductionCapacityCoal",
+            "ProductionCapacityMetalOre",
+            "ProductionCapacityUranium",
+            "ProductionCapacityElectricPower",
+            "ProductionCapacityConsumerGoods",
+            "ProductionCapacityIndustryGoods",
+            "ProductionCapacityMilitaryGoods"
+        ]
+    },
+    {
+        "id": 5,
+        "categoryName": "SUBRESOURCES_PRODUCTIONCOST",
+        "categoryDisplayName": "Resources - Production Cost",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "CostAgriculture",
+            "CostRubber",
+            "CostTimber",
+            "CostPetroleum",
+            "CostCoal",
+            "CostMetalOre",
+            "CostUranium",
+            "CostElectricPower",
+            "CostConsumerGoods",
+            "CostIndustryGoods",
+            "CostMilitaryGoods"
+        ]
+    },
+    {
+        "id": 6,
+        "categoryName": "SUBRESOURCES_MARKETPRICE",
+        "categoryDisplayName": "Resources - Market Price",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "PriceAgriculture",
+            "PriceRubber",
+            "PriceTimber",
+            "PricePetroleum",
+            "PriceCoal",
+            "PriceMetalOre",
+            "PriceUranium",
+            "PriceElectricPower",
+            "PriceConsumerGoods",
+            "PriceIndustryGoods",
+            "PriceMilitaryGoods"
+        ]
+    },
+    {
+        "id": 7,
+        "categoryName": "SUBRESOURCES_MARGIN",
+        "categoryDisplayName": "Resources - Margin",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "MarginAgriculture",
+            "MarginRubber",
+            "MarginTimber",
+            "MarginPetroleum",
+            "MarginCoal",
+            "MarginMetalOre",
+            "MarginUranium",
+            "MarginElectricPower",
+            "MarginConsumerGoods",
+            "MarginIndustryGoods",
+            "MarginMilitaryGoods"
+        ]
+    },
+    {
+        "id": 8,
+        "categoryName": "SUBRESOURCES_BASECOST",
+        "categoryDisplayName": "Resources - Base Cost",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "BaseCostAgriculture",
+            "BaseCostRubber",
+            "BaseCostTimber",
+            "BaseCostPetroleum",
+            "BaseCostCoal",
+            "BaseCostMetalOre",
+            "BaseCostUranium",
+            "BaseCostElectricPower",
+            "BaseCostConsumerGoods",
+            "BaseCostIndustryGoods",
+            "BaseCostMilitaryGoods"
+        ]
+    },
+    {
+        "id": 9,
+        "categoryName": "SUBRESOURCES_FULLCOST",
+        "categoryDisplayName": "Resources - Full Cost",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "FullCostAgriculture",
+            "FullCostRubber",
+            "FullCostTimber",
+            "FullCostPetroleum",
+            "FullCostCoal",
+            "FullCostMetalOre",
+            "FullCostUranium",
+            "FullCostElectricPower",
+            "FullCostConsumerGoods",
+            "FullCostIndustryGoods",
+            "FullCostMilitaryGoods"
+        ]
+    },
+    {
+        "id": 10,
+        "categoryName": "SUBRESOURCES_NODEPRODUCTION",
+        "categoryDisplayName": "Resources - Max Possible Output/node",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "NodeProductionAgriculture",
+            "NodeProductionRubber",
+            "NodeProductionTimber",
+            "NodeProductionPetroleum",
+            "NodeProductionCoal",
+            "NodeProductionMetalOre",
+            "NodeProductionUranium",
+            "NodeProductionElectricPower",
+            "NodeProductionConsumerGoods",
+            "NodeProductionIndustryGoods",
+            "NodeProductionMilitaryGoods"
+        ]
+    },
+    {
+        "id": 11,
+        "categoryName": "SUBRESOURCES_CITYPRODUCTION",
+        "categoryDisplayName": "Resources - City Production",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "CityProductionAgriculture",
+            "CityProductionRubber",
+            "CityProductionTimber",
+            "CityProductionPetroleum",
+            "CityProductionCoal",
+            "CityProductionMetalOre",
+            "CityProductionUranium",
+            "CityProductionElectricPower",
+            "CityProductionConsumerGoods",
+            "CityProductionIndustryGoods",
+            "CityProductionMilitaryGoods"
+        ]
+    },
+    {
+        "id": 12,
+        "categoryName": "SUBRESOURCES_MAXDEMAND",
+        "categoryDisplayName": "Resources - Max Production/Person",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "MaxDemandAgriculture",
+            "MaxDemandRubber",
+            "MaxDemandTimber",
+            "MaxDemandPetroleum",
+            "MaxDemandCoal",
+            "MaxDemandMetalOre",
+            "MaxDemandUranium",
+            "MaxDemandElectricPower",
+            "MaxDemandConsumerGoods",
+            "MaxDemandIndustryGoods",
+            "MaxDemandMilitaryGoods"
+        ]
+    },
+    {
+        "id": 13,
+        "categoryName": "SUBRESOURCES_MINDEMAND",
+        "categoryDisplayName": "Resources - Min Production/Person",
+        "categoryVisibility": true,
+        "categoryExpanded": true,
+        "categoryDescription": "",
+        "categoryIncludedFeatures": [
+            "MinDemandAgriculture",
+            "MinDemandRubber",
+            "MinDemandTimber",
+            "MinDemandPetroleum",
+            "MinDemandCoal",
+            "MinDemandMetalOre",
+            "MinDemandUranium",
+            "MinDemandElectricPower",
+            "MinDemandConsumerGoods",
+            "MinDemandIndustryGoods",
+            "MinDemandMilitaryGoods"
+        ]
+    }
+]

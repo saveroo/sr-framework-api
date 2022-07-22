@@ -1,0 +1,32 @@
+{
+    "donators": [
+        {
+            "ref": "272681865543942668",
+            "deviceId": "12312515129sk",
+            "steamid": "eTvzAmLIF2FGQ5HuJHN3F7n6ktbeywdYdxj9JCtMkOE",
+            "name": "saveroo",
+            "email": "[REDACTED]",
+            "amount": "$55",
+            "via": "paypal.com",
+            "date": "27-02-1992",
+            "extras": "test"
+        },
+        {
+            "ref": "272681865543942668",
+            "deviceId": "12312515129sk",
+            "steamid": "lqA714xPj-ifadzSuHgCAnV-5iWKSFRjcxMITyDck70",
+            "name": "saveroo",
+            "email": "[REDACTED]",
+            "amount": "$55",
+            "via": "paypal.com",
+            "date": "27-02-1992",
+            "extras": "test"
+        }
+    ],
+    "whitelistedDevice": [
+        "eTvzAmLIF2FGQ5HuJHN3F7n6ktbeywdYdxj9JCtMkOE",
+        "lqA714xPj-ifadzSuHgCAnV-5iWKSFRjcxMITyDck70"
+    ],
+    "blacklistedDevice": [
+    ]
+}
