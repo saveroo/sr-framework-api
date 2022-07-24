@@ -4,6 +4,15 @@
     "outDir": "./dist/public/",
     "baseUrl": ".",
     "noEmit": false,
-    "target": "ESNext"
-  }
+    "target": "ESNext",
+    "module": "ES2022"
+  },
+  "include": [
+    "src/types/*.model.ts",
+    "utils/transformers/*.ts",
+    "utils/*.ts",
+    "api/*/*.ts",
+    "types/*.d.ts",
+    "babel.config.js"
+  ],
 }
