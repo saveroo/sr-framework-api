@@ -140,9 +140,9 @@ const htm = `
 
 const regex = /<li>(.*)<\/li>/gm;
 let m;
-let has = [];
+const has = [];
 let c = 1;
-console.log("var string[] TechEffectList = {")
+console.log('var string[] TechEffectList = {')
 while((m = regex.exec(htm)) !== null) {
     if(m.index === regex.lastIndex) {
         regex.lastIndex++;
@@ -155,11 +155,9 @@ while((m = regex.exec(htm)) !== null) {
         }
     })
 }
-console.log("}")
+console.log('}')
 
 // console.log(has);
-
-
 
 // const fetchShit = async () => {
 //     let ft = await fetch("https://supremeruler.gamepedia.com/Tech_Tree")
