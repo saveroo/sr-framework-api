@@ -3,33 +3,40 @@
   "alias": "srframework",
   "cleanUrls": true,
   "builds": [
+    { "src": "public/**", "use": "@vercel/static"},
     { "src" :  "api/**/*.ts", "use": "@vercel/node" }
   ],
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/public/$1" },
+    { "source": "/api/(.*)",
+      "has": [
+       {
+          "type": "header",
           "key" : "X-Content-Type-Options",
           "value" : "nosniff"
         },
         {
+          "type": "header",
           "key" : "X-Frame-Options",
           "value" : "DENY"
         },
         {
+          "type": "header",
           "key" : "X-XSS-Protection",
           "value" : "1; mode=block"
         },
         {
+          "type": "header",
           "key": "Server",
           "value": "(Darwin)"
         },
         {
+          "type": "header",
           "key": "Access-Control-Allow-Origin",
           "value": "*"
         }
-      ]
+      ],
+      "destination": "/api/$1" 
     }
   ]
 }

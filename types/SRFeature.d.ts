@@ -74,11 +74,11 @@
     ColumnAllowEdit: boolean;
   }
 
-  export type Version = {
+  export interface Version {
     GameVersion: string;
     Availability: boolean;
-    Pointers: Pointer[];
-    Categories: Array<Category>;
+    Pointers?: Pointer[];
+    Categories?: Array<Category>;
   }
 
   type FormatType = {
@@ -92,7 +92,7 @@
   export type Game = {
     DisplayName: string;
     ProcessName: string;
-    FormatTypes: FormatType[];
+    FormatTypes?: FormatType[];
     Versions: Version[];
   }
 

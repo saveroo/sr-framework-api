@@ -1,5 +1,5 @@
-﻿import { assert } from "console"
-const hmac = (key: any, url: string) => require("./crypt").hmac(key, url)
+﻿import { assert } from 'console'
+const hmac = async (key: any, url: string) => ((await import('./crypt')).default).hmac(key, url)
 
 if(require.main === module) {
     require('dontenv/config')
@@ -8,5 +8,5 @@ if(require.main === module) {
     const url = process.argv[2]
     assert(url != null, 'Please provide url as params')
     assert(url.charAt(0) === '/', 'url should be started with slash')
-    process.stdout.write(hmac(key, url))
+    process.stdout.write(await hmac(key, url))
 }

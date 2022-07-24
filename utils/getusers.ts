@@ -1,24 +1,26 @@
-﻿import faunadb, { Client, ClientConfig, query } from 'faunadb';
-
+import faunadb, { Client, ClientConfig, query } from 'faunadb';
+import fs from 'fs';
 const q = query;
 
-const secret = process.env.FAUNADB_SECRET || process.env.FAUNADB_SERVER_KEY;
+
+const { FAUNADB_SECRET, FAUNADB_COLLECTIONNAME } = process.env
+
 
 const opts: ClientConfig = {
-  secret: secret as string,
+  secret: FAUNADB_SECRET as string,
   domain: 'db.fauna.com',
   scheme: 'https',
 };
 
 class dbClass {
-  private client: faunadb.Client;
-  private q: any;
+  public client: faunadb.Client;
+  public q: any;
   private readonly collection: string;
 
   constructor(client: Client, q: any) {
     this.client = client;
     this.q = q;
-    this.collection = process.env.FAUNADB_COLLECTIONNAME || 'users';
+    this.collection = FAUNADB_COLLECTIONNAME as string;
   }
 
   async create(dt: SRFApis.IFromFauna) {
@@ -53,7 +55,7 @@ class dbClass {
     );
   }
 
-  async getIndex(): Promise<string>{
+  async getIndex(documentName: string): Promise<string>{
     return await this.client.query(
       this.q.Map(
         this.q.Paginate(this.q.Match(this.collection))
@@ -61,21 +63,24 @@ class dbClass {
     )
   }
 
-  async getData(): Promise<any>{
-    return await this.client.query(q.Map(
-      q.Paginate(
-        q.Documents(q.Collection(this.collection)), { size: 10000 }),
-        q.Lambda((data) => q.Get(data))
-        ))
-  }
-
   async get(id: string) {
     await this.client.query(
       this.q.Get(this.q.Ref(this.q.Collection(this.collection), id))
     );
   }
+
+
+
+//   async tes() {}
+
+  public c() {
+      return this.client;
+  }
+
+  public qq(): dbClass {
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      const newLocal = this;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return newLocal.q;
+  }
 }
-
-const client = new faunadb.Client(opts);
-
-export default new dbClass(client, q);

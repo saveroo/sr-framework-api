@@ -558,3 +558,5 @@ dist
 
 
 .vercel
+inactive/
+excluded/*.ts

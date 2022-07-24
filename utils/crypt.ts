@@ -1,5 +1,5 @@
-﻿﻿import CryptoJS, {WordArray} from 'crypto-js';
-import { createHmac } from 'crypto';
+﻿import CryptoJS, {WordArray} from 'crypto-js';
+import {createHmac} from 'crypto';
 
 const {CRYPT_SALT: _salt} = process.env;
 
@@ -34,15 +34,13 @@ function EncryptText(secretKey: string, data: string): CryptoJS.WordArray {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
   const iv = new CryptoJS.lib.WordArray.init(KeyBytes.words.splice(32/4), 16)
 
-  const encryptedText: WordArray = CryptoJS.AES.encrypt(text, ky, {
+  return CryptoJS.AES.encrypt(text, ky, {
     keySize: keySize,
     blockSize: blockSize,
     iv,
     mode: CryptoJS.mode.CBC,
     padding: CryptoJS.pad.Pkcs7
   });
-
-  return encryptedText;
 }
 
 /**
@@ -50,15 +48,16 @@ function EncryptText(secretKey: string, data: string): CryptoJS.WordArray {
  * @param {*} data to be decrypted (in base 64)
  * @returns {CryptoJS.WordArray} return [xx, xx]
  */
-function DecryptText(secretKey: string, data: any): CryptoJS.WordArray {
+function DecryptText(secretKey: string, data: string): CryptoJS.WordArray {
   const keySize = 256;
   const blockSize = 128;
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const pass: any = CryptoJS.enc.Utf8.parse(secretKey);
+  const pass: string = CryptoJS.enc.Utf8.parse(secretKey);
   // const b64 = Buffer.from(data, 'base64');
+  // console.log(b64)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const salt2: any = CryptoJS.enc.Utf8.parse(_salt as string);
+  const salt2: string = CryptoJS.enc.Utf8.parse(_salt as string);
   // const text = CryptoJS.enc.Utf8.parse(b64.toString());
   const KeyBytes =  CryptoJS.PBKDF2(pass, salt2, {
     keySize: 48,
@@ -89,11 +88,11 @@ export default {
   salt: () => {
     return _salt;
   },
-  encrypted: (secret: string, dt: any) => {
+  encrypted: (secret: string, dt: string) => {
     const result = EncryptText(secret, dt);
     return result.toString();
   },
-  decrypted: (secret: string, data: any) => {
+  decrypted: (secret: string, data: string) => {
     const decrypt = DecryptText(secret, data);
     return CryptoJS.enc.Utf8.stringify(decrypt)
   },
@@ -104,6 +103,6 @@ export default {
   },
   base64HmacDecoder: (b64Hmac: string) => {
       const b = Buffer.from(b64Hmac, 'base64').toString()
-      return CryptoJS.enc.Utf8.parse(b).toString();
+      return CryptoJS.enc.Utf8.parse(b).toString() as string;
   }
 }

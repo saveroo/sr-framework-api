@@ -1,7 +1,7 @@
 ﻿import { MutationTree } from 'vuex';
-import { RootObject } from './state';
+// import * as state from './state';
 
-const mutation: MutationTree<RootObject> = {
+const mutation: MutationTree<SRFeature.RootObject> = {
   someMutation (/* state: ExampleStateInterface */) {
     // your code
 }

@@ -56,18 +56,18 @@
 
   export interface SRClient {
     ref: string;
-    DeviceID: string;
-    UUID: string;
-    MachineName: string;
-    ExePath: string;
+    DeviceID?: string;
+    UUID?: string;
+    MachineName?: string;
+    ExePath?: string;
     FirstRun: Date;
     LastActive: Date;
     ElapsedTime: string;
     IsOnline: boolean;
     SRVersion: string;
     SRRevision: string;
-    OS: ClientOS[];
-    CPU: ClientCPU[];
+    OS?: ClientOS[];
+    CPU?: ClientCPU[];
     STEAM?: ClientSteamProfile;
   }
 
@@ -82,7 +82,7 @@
     date: string,
     extras: string,
     whitelisted: boolean
-  } 
+  }
 
   // export interface SRWhitelist {
   //   DeviceID: string[]
@@ -104,7 +104,7 @@
   type SRClientPreview = Exclude<SRClient, 'OS | CPU | DeviceID | UUID | MachineName | ExePath'>
 
   export interface SRPlayers {
-    Players?: SRClientPreview[]
+    Players: SRClientPreview[]
   }
 
 }
