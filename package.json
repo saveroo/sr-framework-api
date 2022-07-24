@@ -24,7 +24,7 @@
     "faunadb": "^2.14.2",
     "isomorphic-unfetch": "^3.0.0",
     "jsonfile": "^6.0.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "now": "^19.2.0",
     "quasar": "^1.0.0",
     "serverless-azure-functions": "^2.0.13"
