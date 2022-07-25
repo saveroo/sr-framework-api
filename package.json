@@ -6,7 +6,6 @@
   "author": "Muhammad Surga Savero <saveroo27@gmail.com>",
   "private": true,
   "scripts": {
-    "install": "pnpm install",
     "build": "pnpm quasar build",
     "deploy": "vercel",
     "lint": "eslint --ext .js,.ts,.vue ./src",
