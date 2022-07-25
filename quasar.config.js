@@ -66,7 +66,7 @@ module.exports = configure(function (ctx) {
         browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
         node: 'node16'
       },
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'hash', // available values: 'hash', 'history'
       // distDir: ctx.mode.spa ? 'public/dist' : null,
       distDir: ctx.mode.spa ? 'public' : null, // VERCEL
       // transpile: false,
