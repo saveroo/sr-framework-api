@@ -1,0 +1,7 @@
+﻿[
+  { "handle": "filesystem" },
+  {
+    "src": "/(.*)",
+    "dest": "/.vercel/output/static/index.html"
+  }
+]

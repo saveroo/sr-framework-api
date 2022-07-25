@@ -68,7 +68,7 @@ module.exports = configure(function (ctx) {
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // distDir: ctx.mode.spa ? 'public/dist' : null,
-      distDir: ctx.mode.spa ? 'public' : null, // VERCEL
+      distDir: ctx.mode.spa ? './' : null, // VERCEL
       // transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
