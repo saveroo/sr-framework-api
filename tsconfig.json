@@ -1,11 +1,11 @@
 {
-  "extends": "@quasar/app/tsconfig-preset",
+  "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
     "outDir": "./dist/public/",
     "baseUrl": ".",
     "noEmit": false,
-    "target": "ESNext",
-    "module": "ES2022"
+    "target": "esnext",
+    "module": "es2020"
   },
   "include": [
     "src/types/*.model.ts",
@@ -13,6 +13,5 @@
     "utils/*.ts",
     "api/*/*.ts",
     "types/*.d.ts",
-    "babel.config.js"
   ],
 }

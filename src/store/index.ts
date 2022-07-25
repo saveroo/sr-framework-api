@@ -1,37 +1,20 @@
-import { store } from 'quasar/wrappers';
-import Vuex from 'vuex';
-import moduleDb from './module-db';
-
-// import example from './module-example';
-// import { ExampleStateInterface } from './module-example/state';
+import { store } from 'quasar/wrappers'
+import { createPinia } from 'pinia'
 
 /*
  * If not building with SSR mode, you can
- * directly export the Store instantiation
+ * directly export the Store instantiation;
+ *
+ * The function below can be async too; either use
+ * async/await or return a Promise which resolves
+ * with the Store instance.
  */
 
-export interface StateInterface {
-  // Define your own store structure, using submodules if needed
-  // example: ExampleStateInterface;
-  // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
-  srfeature: SRFeature.RootObject
-  // example: unknown;
-}
+export default store((/* { ssrContext } */) => {
+  const pinia = createPinia()
 
-export default store(function ({ Vue }) {
-  Vue.use(Vuex);
+  // You can add Pinia plugins here
+  // pinia.use(SomePiniaPlugin)
 
-  const Store = new Vuex.Store<StateInterface>({
-    modules: {
-      srfeature: moduleDb
-      // srfeature<StateInterface>
-      // example
-    },
-
-    // enable strict mode (adds overhead!)
-    // for dev mode only
-    strict: !!process.env.DEV
-  });
-
-  return Store;
-});
+  return pinia
+})

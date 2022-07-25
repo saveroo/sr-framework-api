@@ -9,5 +9,5 @@ module.exports = () => {
       parsedEnv[key] = JSON.stringify(parsedEnv[key])
     }
   }
-  return parseFloat()
+  return parsedEnv;
 }
