@@ -6,6 +6,8 @@ import Guard from '../../utils/guard';
 import steam from '../../utils/steampie'; //
 import { SwitchOnlineStatus } from '../../utils/online';
 import { CreateResponse } from '../../utils/response';
+import { SRFApis } from 'app/types/SRFApis';
+
 const {CRYPT_KEY} = process.env
 
 // Faunda DB Class, get index and put as ServerData

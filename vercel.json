@@ -2,12 +2,13 @@
   "version": 2,
   "alias": "srframework",
   "cleanUrls": true,
+  "public": true,
   "builds": [
     { "src": "public/**", "use": "@vercel/static"},
     { "src" :  "api/**/*.ts", "use": "@vercel/node" }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/public/$1" },
+    { "source": "/", "destination": "/public/$1" },
     { "source": "/api/(.*)",
       "has": [
        {
@@ -36,7 +37,7 @@
           "value": "*"
         }
       ],
-      "destination": "/api/$1" 
+      "destination": "/api/$1"
     }
   ]
 }

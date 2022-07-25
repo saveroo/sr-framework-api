@@ -1,5 +1,6 @@
 ﻿import jsonFile from 'jsonfile';
 import path from 'path';
+import {SRFApis} from 'app/types/SRFApis';
 import {SRFeature} from 'app/types/SRFeature';
 
 export const SchemaDonators = new Promise((resolve, reject) => {

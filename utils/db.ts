@@ -1,4 +1,5 @@
 ﻿import faunadb, { Client, ClientConfig, query } from 'faunadb';
+import {SRFApis} from 'app/types/SRFApis';
 
 const q = query;
 

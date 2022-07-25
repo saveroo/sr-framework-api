@@ -1,4 +1,4 @@
-﻿declare namespace SRFApis {
+﻿export declare namespace SRFApis {
 
   export interface TResponseFaunaGetCollections {
     data: TResponseFaunaCollection[],
