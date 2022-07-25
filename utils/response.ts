@@ -1,7 +1,7 @@
-import { NowResponse } from '@vercel/node'
+import { VercelResponse } from '@vercel/node'
 
 export function CreateResponse<T>(
-  instance: NowResponse,
+  instance: VercelResponse,
   statusCode: number,
   body: T,
   // eslint-disable-next-line @typescript-eslint/ban-types

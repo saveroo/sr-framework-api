@@ -1,12 +1,11 @@
 ﻿// import faunadb, {Client, ClientConfig, query} from 'faunadb'
 import { default as srCrypt } from '../../utils/crypt';
-import { NowRequest, NowResponse } from '@vercel/node/dist';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import DB from '../../utils/db';
 import Guard from '../../utils/guard';
 import steam from '../../utils/steampie'; //
 import { SwitchOnlineStatus } from '../../utils/online';
 import { CreateResponse } from '../../utils/response';
-import fetch from 'node-fetch';
 const {CRYPT_KEY} = process.env
 
 // Faunda DB Class, get index and put as ServerData
@@ -20,7 +19,7 @@ const dbq = DB;
 // new Date, for updating last Active
 const dt = new Date();
 
-module.exports = async (request: NowRequest, response: NowResponse) => {
+module.exports = async (request: VercelRequest, response: VercelResponse) => {
   // console.log('query: ' + request.query);
   // console.log('headers: ' + request.headers);
   return Guard(request, response)
@@ -105,12 +104,10 @@ module.exports = async (request: NowRequest, response: NowResponse) => {
                     STEAM: player
                   }
                 })
-                // Decript
                 // let data: any = srCrypt.decrypted(CRYPT_KEY as string, request.body.data);
                 // data = JSON.parse(data);
 
                 console.log('[STEAM]', request.body)
-                // jkljl
                 response.status(200).json(player);
               }
               break;

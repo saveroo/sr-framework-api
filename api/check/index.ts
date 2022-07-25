@@ -1,7 +1,7 @@
 ﻿import {CreateResponse} from '../../utils/response';
 import {SchemaData, SchemaDonators} from '../../utils/loaders';
 import Guard from '../../utils/guard';
-import {NowRequest, NowResponse} from '@vercel/node/dist';
+import {VercelRequest, VercelResponse} from '@vercel/node/dist';
 import {SRFeature} from 'app/types/SRFeature';
 
 // TODO: Check Version properly
@@ -11,7 +11,7 @@ function partially<T>(obj: T): Partial<T> {
   return obj as Partial<T>;
 }
 
-module.exports = async (req: NowRequest, res: NowResponse) => {
+module.exports = async (req: VercelRequest, res: VercelResponse) => {
   await Guard(req, res).then(async (allowed) => {
     if (allowed) {
       switch (req.query.ops) {
@@ -32,7 +32,7 @@ module.exports = async (req: NowRequest, res: NowResponse) => {
             }
           });
         default:
-          return await SchemaData.then((data): NowResponse => {
+          return await SchemaData.then((data): VercelResponse => {
             if(data == undefined)
               return res.status(500).json({
                 status: res.statusCode,

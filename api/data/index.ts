@@ -1,4 +1,4 @@
-﻿import {NowRequest, NowResponse} from '@vercel/node/dist';
+﻿import {VercelRequest, VercelResponse} from '@vercel/node/dist';
 import crypt from '../../utils/crypt';
 import {SchemaData} from '../../utils/loaders';
 import guard from '../../utils/guard';
@@ -6,7 +6,7 @@ import {CreateResponse} from '../../utils/response';
 const {CRYPT_KEY} = process.env;
 // TODO: Check Version properly
 // /check/version
-export default async (request: NowRequest, response: NowResponse) => {
+export default async (request: VercelRequest, response: VercelResponse) => {
   // console.log('query: ' + request.query);
   // console.log('headers: ' + request.headers);
   // guard an api
