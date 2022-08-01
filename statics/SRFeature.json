@@ -4,8 +4,20 @@
     "SRFRepository": "",
     "SRFChangelog": [
       {
+        "Date": "08/02/2022",
+          "Version": "3.1.1.0",
+          "Type": "Release",
+          "Title": "HOTFIX",
+          "Description": "HOTFIX",
+          "Changes": [
+            "@EDITOR",
+            "  -fix(special): fix compression that makes 'CLICK DAY OPTION' throws 'SafeWrite' error.",
+            "  -fix(special): better naming context to cheats caption."
+          ]
+      },
+      {
         "Date": "08/01/2022",
-          "Version": "3.0.1.0",
+          "Version": "3.1.0.0",
           "Type": "Release",
           "Title": "Minor Update",
           "Description": "Fixes & Small Changes",
@@ -229,10 +241,12 @@
     "SRFName": "SR Helper",
     "SRFDescription": "Supreme Ruler Ultimate Real Time Editor",
     "SRFIdentifier": "SR_RTE",
-    "SRFVersion": "3.0.1.0",
-    "SRFRevision": "40001-r1",
+    "SRFVersion": "3.1.1.0",
+    "SRFRevision": "40001-r2",
     "SRFRevisionLogs": [
         "<b>[40001]</b>",
+        "  -[General-r2] Bump latest version to 3.1.1.0",
+        "  -[General-r2] Semantic Versioning correction, 3.0.2.* to 3.1.0.*",
         "  -[General-r1] Changelog typo fix",
         "  -[General] update changelogs and download link",
         "",
@@ -317,7 +331,7 @@
     ],
     "SRFMandatoryUpdate": false,
     "SRFMandatoryUpdateMessage": "Binary update",
-    "SRFUpdateMessage": "There is new update\nI suggest to resubscribe and re-unzip\nBecause you are going to see error after clicking okay",
+    "SRFUpdateMessage": "There is new HOTFIX update\nI suggest to resubscribe and re-unzip\nBecause you are going to see error after clicking okay",
     "SRFDownloadLink": "steam://url/CommunityFilePage/2840178069",
     "SRFTags": [
         "Games",
