@@ -4,6 +4,35 @@
     "SRFRepository": "",
     "SRFChangelog": [
       {
+        "Date": "08/05/2022",
+          "Version": "3.2.0.0",
+          "Type": "Release",
+          "Title": "Hotfix & Small Update",
+          "Description": "Prevent 3rd party lib memory leak",
+          "Changes": [
+            "@MINIEDITOR",
+            "  -fix(warfare): TrackedUnit Button now synchronized.",
+            "  -fix(warfare): update several obsolete caption.",
+            "@LOADER",
+            "  -fix(ads): 3rd party lib unaddressed memory leak workaround",
+            "@EDITOR",
+            "  -fix(ads): 3rd party lib unaddressed memory leak workaround",
+            "  -feat(general): Go To sub category by right click.",
+            "  -feat(warfare/display): Overhaul UI Resource Usage Display",
+            "  -feat(warfare/display): Green/Yellow/Red colored border to show Resource Usage",
+            "  -feat(warfare/display): clicking resource [Icon] now change daily/annual figure",
+            "  -feat(warfare/display): clicking resource [Progress Bar] now percentage/actual figure",
+            "  -feat(warfare/*): Sub Tab UI now more spacier",
+            "  -feat(special): cheat end day",
+            "  -feat(special): cheat 1 day facility",
+            "  -feat(special): cheat no move",
+            "  -fix(warfare): update several obsolete caption/tooltips",
+            "  -fix(warfare): fix error when selected UnitName longer than 32 characters",
+            "  -fix(general): improved r/w cache error handling.",
+            "  -fix(resources/popup): checking row visiblity no longer close the popup."
+          ]
+      },
+      {
         "Date": "08/02/2022",
           "Version": "3.1.1.0",
           "Type": "Release",
@@ -241,10 +270,11 @@
     "SRFName": "SR Helper",
     "SRFDescription": "Supreme Ruler Ultimate Real Time Editor",
     "SRFIdentifier": "SR_RTE",
-    "SRFVersion": "3.1.1.0",
-    "SRFRevision": "40001-r2",
+    "SRFVersion": "3.2.0.0",
+    "SRFRevision": "40001-r3",
     "SRFRevisionLogs": [
         "<b>[40001]</b>",
+        "  -[General-r3] Bump latest version & changelog to 3.2.0.0",
         "  -[General-r2] Bump latest version to 3.1.1.0",
         "  -[General-r2] Semantic Versioning correction, 3.0.2.* to 3.1.0.*",
         "  -[General-r1] Changelog typo fix",
@@ -331,7 +361,7 @@
     ],
     "SRFMandatoryUpdate": false,
     "SRFMandatoryUpdateMessage": "Binary update",
-    "SRFUpdateMessage": "There is new HOTFIX update\nI suggest to resubscribe and re-unzip\nBecause you are going to see error after clicking okay",
+    "SRFUpdateMessage": "There is new [Performance Hotfix & Small Update]\nI suggest to resubscribe and re-unzip\nOkay to see changelogs",
     "SRFDownloadLink": "steam://url/CommunityFilePage/2840178069",
     "SRFTags": [
         "Games",
