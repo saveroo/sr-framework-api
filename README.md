@@ -1,9 +1,14 @@
-# SRFramework API 
+# SRFramework API
 
-> SR Framework API
+[![CodeFactor](https://www.codefactor.io/repository/github/saveroo/sr-framework-api/badge)](https://www.codefactor.io/repository/github/saveroo/sr-framework-api)
+![Vercel](https://vercelbadge.vercel.app/api/saveroo/sr-framework-api)
 
-## # Data Structure
 
+> SR Framework API (Serverless/faunadb)
+
+## # Data Tree Structure
+
+```
 1. SRFAuthor 
 2. SRFContact 
 3. SRFRepository 
@@ -60,17 +65,18 @@
         - offset 
         - editable 
         - enabled 
+```
 
 ## # TODOs
 
 #### - **Client**
-- [x] Splash Based Initialization  
+- [x] Splash Based Initialization
 - [x] Form Loader
-- [x] Form Main 
-- [x] Rest Consumer 
-- [x] Feature Modularity 
+- [x] Form Main
+- [x] Rest Consumer
+- [x] Feature Modularity
 - [x] Cryptography
-- [x] Offline first 
+- [x] Offline first
 ##
 #### - **Server**
 - [x] API Consumption
