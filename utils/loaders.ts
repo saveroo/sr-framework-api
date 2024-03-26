@@ -1,7 +1,7 @@
 ﻿import jsonFile from 'jsonfile';
 import path from 'path';
-import {SRFApis} from 'app/types/SRFApis';
-import {SRFeature} from 'app/types/SRFeature';
+import {SRFApis} from '../types/SRFApis';
+import {SRFeature} from '../types/SRFeature';
 
 export const SchemaDonators = new Promise((resolve, reject) => {
   const jsonPath = path.join(__dirname, '../statics/donators.json');

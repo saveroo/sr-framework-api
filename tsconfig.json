@@ -1,17 +1,16 @@
 {
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
-    "outDir": "./dist/public/",
     "baseUrl": ".",
     "noEmit": false,
-    "target": "esnext",
-    "module": "es2020",
   },
   "include": [
     "src/types/*.model.ts",
     "utils/transformers/*.ts",
     "utils/*.ts",
     "api/*/*.ts",
+    "api/**/index.ts",
+    "./types/*.d.ts",
     "types/*.d.ts",
   ],
 }

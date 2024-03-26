@@ -1,9 +1,9 @@
 ﻿import {CreateResponse} from '../../utils/response';
 import {SchemaData, SchemaDonators} from '../../utils/loaders';
 import Guard from '../../utils/guard';
-import {VercelRequest, VercelResponse} from '@vercel/node/dist';
-import {SRFeature} from 'app/types/SRFeature';
-import {SRFApis} from 'app/types/SRFApis';
+import {VercelRequest, VercelResponse} from '@vercel/node';
+import {SRFeature} from '../../types/SRFeature';
+import {SRFApis} from '../../types/SRFApis';
 
 // TODO: Check Version properly
 // /check/version
